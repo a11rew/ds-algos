@@ -1,0 +1,9 @@
+{
+  "name": "ds-algos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "https://github.com/a11rew/ds-algos.git",
+  "author": "AndrewGlago <andrewglago1@gmail.com>",
+  "license": "MIT"
+}
