@@ -3,7 +3,7 @@ let Stack = (function () {
 
   class Stack {
     constructor() {
-      items.set(this, []);
+      this.items = [];
     }
 
     // The book specifies using the index n where n is length of array as top and index 0 as base
@@ -11,44 +11,36 @@ let Stack = (function () {
 
     push = function (element) {
       // adds element to top of stack
-      let s = items.get(this);
-      return s.unshift(element);
+      return this.items.unshift(element);
     };
 
     pop = function () {
       // removes top of stack and returns it
-      let s = items.get(this);
-      return s.shift();
+      return this.items.shift();
     };
 
     peek = function () {
       // returns top of stack
-      let s = items.get(this);
-
-      return s[0];
+      return this.items[0];
     };
 
     isEmpty = function () {
       // returns Boolean corresponding to if stack is empty or not
-      let s = items.get(this);
-      return s.length === 0;
+      return this.items.length === 0;
     };
 
     clear = function () {
       // removes all elements in stack
-      let s = items.get(this);
-      s = [];
+      this.items = [];
     };
 
     size = function () {
       // returns size of stack
-      let s = items.get(this);
-      return s.length;
+      return this.items.length;
     };
 
     print = function () {
-      let s = items.get(this);
-      console.log(s.toString());
+      console.log(this.items.toString());
     };
   }
 
